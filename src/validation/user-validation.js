@@ -17,7 +17,7 @@ const userValidation = [
         .isEmpty()
         .isLength({ min: 8 })
         .trim()
-        .withMessage("Password is at least 8 character."),
+        .withMessage("Password must have at least 8 character."),
 ];
 
 module.exports = { userValidation };
