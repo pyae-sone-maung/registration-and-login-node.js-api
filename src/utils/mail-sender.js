@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 
-const sentMail = (receiverMail, otp) => {
+const mailSender = (receiverMail, html, otp) => {
     let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -13,10 +13,10 @@ const sentMail = (receiverMail, otp) => {
         from: process.env.SENDER_MAIL_ADDRESS,
         to: receiverMail,
         subject: "Account verification code",
-        text: "otp,",
+        html: html,
     };
 
     transporter.sendMail(mailOptions);
 };
 
-module.exports = { sentMail };
+module.exports = { mailSender };
