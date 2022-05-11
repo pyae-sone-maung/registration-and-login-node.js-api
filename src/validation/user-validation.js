@@ -20,4 +20,14 @@ const userValidation = [
         .withMessage("Password must have at least 8 character."),
 ];
 
-module.exports = { userValidation };
+const loginValidation = [
+    check("email").not().isEmpty().trim().withMessage("Email is required."),
+    check("password")
+        .not()
+        .isEmpty()
+        .isLength({ min: 8 })
+        .trim()
+        .withMessage("Password must have at least 8 character."),
+];
+
+module.exports = { userValidation, loginValidation };
