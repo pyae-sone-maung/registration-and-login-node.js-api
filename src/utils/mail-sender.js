@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 
-const mailSender = (receiverMail, html, otp) => {
+const mailSender = (subject, receiverMail, html, otp) => {
     let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -10,9 +10,9 @@ const mailSender = (receiverMail, html, otp) => {
     });
 
     let mailOptions = {
-        from: process.env.SENDER_MAIL_ADDRESS,
+        from: "<no-reply>register-login@project.com",
         to: receiverMail,
-        subject: "Account verification code",
+        subject: subject,
         html: html,
     };
 
