@@ -30,4 +30,33 @@ const loginValidation = [
         .withMessage("Password must have at least 8 character."),
 ];
 
-module.exports = { userValidation, loginValidation };
+const accountVerifyValidation = [
+    check("email").not().isEmpty().trim().withMessage("Email is required."),
+    check("confirm_otp")
+        .not()
+        .isEmpty()
+        .trim()
+        .withMessage("OTP code is required."),
+];
+
+const resetPasswordValidation = [
+    check("email").not().isEmpty().trim().withMessage("Email is required."),
+    check("new_password")
+        .not()
+        .isEmpty()
+        .isLength({ min: 8 })
+        .trim()
+        .withMessage("Password must have at least 8 character."),
+    check("confirm_otp")
+        .not()
+        .isEmpty()
+        .trim()
+        .withMessage("OTP code is required."),
+];
+
+module.exports = {
+    userValidation,
+    loginValidation,
+    accountVerifyValidation,
+    resetPasswordValidation,
+};
