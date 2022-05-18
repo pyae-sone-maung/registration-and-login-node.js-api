@@ -13,7 +13,7 @@ This project is a sample registration and login with email verification. To comp
 -   Run this command on terminal or [Download here](https://github.com/pyae-sone-maung/register-login-nodejs-api/archive/refs/heads/main.zip).
 
 ```
-https://github.com/pyae-sone-maung/register-login-nodejs-api.git
+https://github.com/pyae-sone-maung/registration-and-login-node.js-api.git
 ```
 
 -   Install dependencies
