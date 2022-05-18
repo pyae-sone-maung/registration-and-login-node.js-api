@@ -19,7 +19,7 @@ https://github.com/pyae-sone-maung/registration-and-login-node.js-api.git
 -   Install dependencies
 
 ```
-cd register-login-nodejs-api
+cd registration-and-login-node.js-api
 npm install
 ```
 
